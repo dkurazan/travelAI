@@ -6,6 +6,7 @@ TravelAI: Your personal tour guide. A simple project powered by OpenAI nad imple
  - Tanstack query
  - Axios
  - Tailwind
+ - DaisyUI
  - Clerk
  - OpenAI API
  - Unsplash API
