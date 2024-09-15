@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="max-w-md">
           <h1 className="text-6xl text-primary font-bold">{metadata.title}</h1>
           <p className="py-6 text-lg leading-loose">{metadata.description}</p>
-          <Link href='/chat' className='btn btn-secondary '>
+          <Link href='/chat' className='btn btn-secondary'>
             Get Started
           </Link>
         </div>

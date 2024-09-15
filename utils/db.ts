@@ -8,12 +8,14 @@ const connectDB = async () => {
   }
 
   try {
-    await mongoose.connect(dbURI);
+    await mongoose.connect('mongodb+srv://deekorde:VFc57BibZEmLtWjs@cluster0.sjath.mongodb.net/TravelAI-db?retryWrites=true&w=majority');
 
     console.log("MongoDB Connected successfully");
   } catch (error) {
     console.error("Error connecting to MongoDB", error);
   }
 };
+
+export default connectDB;
 
 connectDB();

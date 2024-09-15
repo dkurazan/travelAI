@@ -4,6 +4,7 @@ import OpenAI from "openai";
 import { revalidatePath } from "next/cache";
 import { Tour } from '@/models/tourModel';
 import { Token } from '@/models/tokenModel';
+import connectDB from "./db";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -99,6 +100,8 @@ export const getSingleTour = async (id) => {
 };
 
 export const fetchUserTokensById = async (clerkId) => {
+  await connectDB();
+
   const result = await Token.findOne({ clerkId });
 
   return result ? result.tokens : null;
