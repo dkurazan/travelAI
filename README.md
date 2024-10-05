@@ -1,6 +1,6 @@
 # TravelAI project
 
-TravelAI: Your personal tour guide. A simple project powered by OpenAI nad implemented using follow technologies:
+TravelAI: Your personal tour guide. A simple project powered by OpenAI and implemented using following technologies:
  - Next.js
  - MongoDB
  - Tanstack query
@@ -14,7 +14,7 @@ TravelAI: Your personal tour guide. A simple project powered by OpenAI nad imple
 # Live Demo
 
 Check out the live demo at
-[](*url*)
+[https://travel-ai-sage.vercel.app/](https://travel-ai-sage.vercel.app/)
 
 ## Requirements
 
