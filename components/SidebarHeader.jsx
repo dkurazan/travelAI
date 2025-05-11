@@ -8,7 +8,7 @@ export default function SidebarHeader() {
       <Link href={'/'} className="flex items-center gap-4 mr-auto">
         <SiOpenaigym className="w-10 h-10 text-primary" />
         <h2 className="text-xl font-extrabold text-primary">
-          TravelAI
+        RouteAI
         </h2>
       </Link>
       <ThemeToggle />

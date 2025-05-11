@@ -14,7 +14,7 @@ export default function ToursPage() {
 
   return (
     <>
-      <form className="max-w-lg mb-12">
+      <form className="max-w-lg mb-12 ">
         <div className="join w-full">
           <input
             type="text"
@@ -36,7 +36,7 @@ export default function ToursPage() {
         </div>
       </form>
       {isPending ? (
-        <span className=" loading"></span>
+        <span className="loading"></span>
       ) : (
         <ToursList data={data} />
       )}

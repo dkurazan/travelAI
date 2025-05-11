@@ -1,6 +1,6 @@
-# TravelAI project
+# RouteAI project
 
-TravelAI: Your personal tour guide. A simple project powered by OpenAI and implemented using following technologies:
+RouteAI: Your personal tour guide. A simple project powered by OpenAI and implemented using following technologies:
  - Next.js
  - MongoDB
  - Tanstack query

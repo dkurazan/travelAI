@@ -32,6 +32,7 @@ export default function NewTour() {
       }
 
       const newTour = await generateTourResponse(destination);
+      
       if (!newTour) {
         toast.error("No matching city found...");
         return null;
