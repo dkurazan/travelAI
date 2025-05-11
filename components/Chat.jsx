@@ -8,6 +8,7 @@ import {
   subtractTokens,
 } from "@/utils/actions";
 import { useAuth } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 import {
   useMutation,
   useInfiniteQuery,
@@ -20,12 +21,23 @@ const MESSAGES_PER_PAGE = 10;
 
 export default function Chat() {
   const [text, setText] = useState("");
-  const { userId } = useAuth();
+  const { userId, isLoaded, isSignedIn } = useAuth();
+  const router = useRouter();
   const messagesEndRef = useRef(null);
   const messagesContainerRef = useRef(null);
   const isInitialLoad = useRef(true);
   const scrollHeightRef = useRef(0);
   const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      router.push("/sign-in");
+    }
+  }, [isLoaded, isSignedIn, router]);
+
+  if (!isLoaded || !isSignedIn) {
+    return null;
+  }
 
   const { data, isLoading, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useInfiniteQuery({
@@ -89,7 +101,10 @@ export default function Chat() {
   };
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
   };
 
   useEffect(() => {
